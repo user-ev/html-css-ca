@@ -1,0 +1,300 @@
+@import url('imports/variables.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Young+Serif&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css');
+
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+body {
+    background-color:var(--hex-beige);
+    font-family: var(--text-body);
+    color: var(--hex-text);
+    font-weight: 400;
+    font-size: 1em;
+    line-height:1.3em;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--text-heading);
+    font-weight:400;
+}
+
+h1 {
+    font-size:2.5rem;
+    line-height:2rem;
+    margin-bottom:20px;
+}
+
+h2, h3, h4 {
+    color: var(--hex-beige);
+}
+
+h2, h3 {
+    text-align: center;
+}
+h2 {position: relative;}
+h2::after {
+    content: "";
+    position: absolute;
+    margin:auto;
+    top: calc(100% + 20px);
+    left:calc(50% - 152px);
+    height: 11px;
+    width: 304px;
+    background-image: url(../vectors/h2-line.svg);
+    background-position: center center;
+    background-size: cover;
+}
+
+h4 {
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+p {
+    margin:5px 0px;
+}
+
+button,
+.button {
+    font-size:1rem;
+    font-family: var(--text-heading);
+    color:var(--hex-text);
+    text-decoration: none;
+    border-radius: 40px;
+    border: 1px solid var(--hex-green);
+    background: rgba(var(--rgb-green), 0.8);
+    box-shadow: var(--box-shadow);
+    padding:10px 20px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+    button:hover,
+    .button:hover {
+        background: rgba(var(--rgb-green), 1);
+    }
+
+/* header */
+header {
+    position:fixed;
+    z-index: 900;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:60px;
+    padding:0px 20px;
+    background-color: var(--hex-header);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap:15px;
+}
+
+    .header-logo {
+        position:absolute;
+        top:10px;
+        left:10px;
+        width:205px;
+        height:80px;
+        background-color: var(--hex-beige);
+        border:1px solid var(--hex-header);
+        border-radius:50%;
+        transform: rotate(-6deg);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .header-logo img {
+            width:auto;
+            height:60px;
+        }
+
+    header .search {
+        width:170px;
+        padding:5px 10px;
+        background-color:var(--hex-beige);
+        border-radius:20px;
+        color:rgba(var(--rgb-text), 0.7);
+        font-size:0.8rem;
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+
+        header .search .ti,
+        header .cart .ti {
+            color:var(--hex-header);
+            font-size:18px;
+        }
+
+    header .cart {
+        width:33px;
+        height:33px;
+        background-color: var(--hex-beige);
+        border-radius:20px;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap:25px;
+    }
+
+    nav a {
+        color: var(--hex-beige);
+        text-decoration: none;
+    }
+
+        nav a:hover {
+            text-decoration: underline 1px wavy var(--hex-beige);
+        }
+
+/* main */
+main {
+    margin-top:60px;
+}
+
+section,
+footer {
+    padding:0px 50px 175px 50px;
+    position:relative;
+}
+
+/* section: hero */
+.intro {
+    display: flex;
+    align-items: center;
+    padding:0px 0px 50px 0px;
+    height:700px;
+}
+
+    .intro > * {
+        width:50vw;
+    }
+
+    .intro-img {
+        height:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background: repeating-linear-gradient(to right, var(--hex-blue-light), var(--hex-blue-light) 20px, var(--hex-beige) 20px, var(--hex-beige) 40px);
+    }
+
+    .intro-img img {
+        position:relative;
+        width:460px;
+        height:460px;
+        border-radius:5px;
+        outline:10px solid var(--hex-blue-light);
+    }
+
+    .intro-text {
+        padding:0px 100px 0px 50px;
+    }
+
+/* section: new arrivals */
+.new-arrivals {
+    background-color: var(--hex-blue-medium);
+}
+
+/* section: blog */
+.blog {
+    background-color: var(--hex-blue-dark);
+}
+
+/* footer */
+footer {
+    background-color: var(--hex-blue-footer);
+    display: flex;
+    align-items:flex-start;
+    gap:20px;
+}
+
+    .footer-column {
+        width:25%;
+    }
+
+    .footer-column img {
+        width:145px;
+        filter: brightness(0%) invert(100%);
+    }
+
+    .footer-column ul {
+        list-style: none inside;
+        margin:0;
+        padding:0;
+    }
+
+        .footer-column ul li {
+            margin:3px 0px;
+        }
+
+    .footer-column a {
+        text-decoration: none;
+        color:var(--hex-beige);
+        font-weight:400;
+    }
+
+        .footer-column a:hover {
+            text-decoration: underline 1px wavy;
+        }
+
+    .footer-fish {
+        position:relative;
+        width:15%;
+        height:100%;
+        align-self:flex-end;
+    }
+
+        .footer-fish .ti {
+            position:absolute;
+            color:var(--hex-beige);
+            font-size:20px;
+            right:0px;
+            bottom:30px;
+        }
+
+            .footer-fish .ti:nth-of-type(2) {
+                right:30px;
+                bottom:0px;
+            }
+
+            .footer-fish .ti:nth-of-type(3) {
+                right:60px;
+                bottom:50px;
+            }
+
+
+/* waves */
+.new-arrivals::before,
+.blog::before,
+footer::before {
+        content: '';
+        position: absolute;
+        top: -175px;
+        left: 0px;
+        height: 175px;
+        width: 100%;
+        background-position: top center;
+        background-size: cover;
+    }
+
+.new-arrivals::before {
+    background-image: url(../vectors/new-arrivals.svg);
+}
+
+.blog::before {
+    background-image: url(../vectors/blog.svg);
+}
+
+footer::before {
+    background-image: url(../vectors/footer.svg);
+}

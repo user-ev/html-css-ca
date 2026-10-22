@@ -1,0 +1,20 @@
+:root {
+    /* colours */
+    --hex-text:#000000;
+    --rgb-text:0, 0, 0;
+    --hex-header:#A35D01;
+    --hex-beige:#FFF7EB;
+    --hex-green: #CBCC6F;
+    --rgb-green: 203, 204, 111;
+    --hex-blue-light:#A1C9ED;
+    --hex-blue-medium:#7AA6CE;
+    --hex-blue-dark:#6B98C1;
+    --hex-blue-footer:#46729A;
+
+    /* typography */
+    --text-body:'Inter', sans-serif;
+    --text-heading:'Young Serif', serif;
+
+    /* styling */
+    --box-shadow:0 0 4px 0 rgba(0, 0, 0, 0.10);
+}
